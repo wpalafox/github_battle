@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 require('./index.css');
+
 
 
 
@@ -18,7 +20,13 @@ class App extends Component {
 
 var USER_DATA = {
 	name: 'Will Palafox',
-	img: 'http://i0.kym-cdn.com/entries/icons/mobile/000/025/249/fiona.jpg',
+	img: {image:'http://i0.kym-cdn.com/entries/icons/mobile/000/025/249/fiona.jpg'},
+	
+
+
+
+
+
 	username:  'wpalafox'
 }
 
@@ -31,6 +39,7 @@ class Badge extends React.Component {
 	  <div>
 	  	<img src={this.props.user.img} 
 	  	alt='Avatar'
+	  	style={{width: 100, height: 100}}
 	  
 		/>
 
@@ -42,22 +51,13 @@ class Badge extends React.Component {
 }
 
 
-
-
-
-
-
-
-
-
+Badge.propTypes = {
+	name: PropTypes.string.isRequired,
+	img: PropTypes.string.isRequired,
+	username: PropTypes.string.isRequired
+}
 
 ReactDOM.render(
 	<Badge user={USER_DATA}/>,
 	document.getElementById('app')
 );
-
-
-
-
-
-
