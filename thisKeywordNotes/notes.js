@@ -151,6 +151,10 @@ newFn();
 
 
 
+/*The "this" Keyword Pt3: The "new" and "window" binding */
+
+
+
 
 
 
