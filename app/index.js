@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import App from './app'
 require('./index.css');
 
 /*
@@ -17,6 +18,14 @@ class App extends Component {
 
 
 
+ReactDOM.render(
+	<App />,
+	document.getElementById('app')
+);
+
+
+
+/*
 var USER_DATA = {
 	name: 'Will Palafox',
 	img: 'http://i0.kym-cdn.com/entries/icons/mobile/000/025/249/fiona.jpg',
@@ -43,8 +52,4 @@ Badge.propTypes = {
 	img: PropTypes.string,
 	username: PropTypes.string
 }
-
-ReactDOM.render(
-	<Badge user={USER_DATA}/>,
-	document.getElementById('app')
-);
+*/
